@@ -1,0 +1,27 @@
+.mainText{
+    background-image: url("C:/Users/natad/AngularProj/fg-lab-6/src/assets/beach.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+
+.nav_nav{
+    background-color: #071733f5;
+}
+
+.welcomeText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #0d2b5ef5;
+    color: white;
+    height: 6rem;
+    padding: 20px;
+}
+/*btn1 = view products button*/
+.btn1{
+    background-color: rgba(19, 32, 109, 0.295);
+}

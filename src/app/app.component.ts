@@ -13,6 +13,5 @@ import { CommonModule } from '@angular/common';
 })
 
 export class AppComponent {
-  title = 'fg-lab-6';
-  welcomePage = "Welcome to my Product Catalog";
+
 }

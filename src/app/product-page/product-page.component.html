@@ -1,8 +1,30 @@
-<h1>HEEEEEEEEEEEEEEE</h1>
-<h1>HEEEEEEEEEEEEEEE</h1>
-<h1>HEEEEEEEEEEEEEEE</h1>
-<h1>HEEEEEEEEEEEEEEE</h1>
-<h1>HEEEEEEEEEEEEEEE</h1>
-<h1>HEEEEEEEEEEEEEEE</h1>
-<h1>HEEEEEEEEEEEEEEE</h1>
 
+<div class="bg_main">
+    <div class="container">
+  <h2 style="padding-top: 5rem;" class="mb-4 text-white">Product Catalog</h2>
+  <table class="table table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price (₱)</th>
+         <th>Location</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency:'PHP':'symbol':'1.0-0' }}</td>
+        <td>{{ product.location }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="viewDetails(product)">
+            View Details
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

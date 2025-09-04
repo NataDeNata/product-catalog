@@ -1,34 +1,42 @@
+<nav class="nav_nav navbar navbar-expand-lg navbar-dark p-4 fs-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Product Catalog</a>
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Product Catalog</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a routerLink="/product" class="nav-link">Products</a>
-                </li>
-              </ul>
-            </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn1" type="submit">Search</button>
-              </form>
-          </div>
-        </nav>
-        <router-outlet></router-outlet>
-        <div class="welcomeText text-center lh-1">
-            <h1>{{welcomePage}}</h1>
-        </div>
-        <div class="mainText text-center p-5 text-white">
-            <h2>This is a product catalog, feel free to view and explore!</h2>
-            <p style="margin-bottom: 5rem;">This website is a simple product catalog and is required for an
-              activity in "Application Development" using Angular.
-            </p>
-            <button type="button" class="btn btn-outline-light p-3" routerLink="/product">View Products</button>
-        </div>
+    <!-- Mobile toggle button -->
+    <!-- Mobile toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/product"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            Products
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Search form -->
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn1" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,19 @@
+.product-card {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-card img {
+  object-fit: cover;
+  height: 300px;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+}
+
+.list-group-item {
+  background-color: transparent;
+}
