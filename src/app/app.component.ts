@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterModule, CommonModule, RouterLink],
   templateUrl: './app.component.html',
+  standalone: true,
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'fg-lab-6';
+  welcomePage = "Welcome to my Product Catalog";
 }

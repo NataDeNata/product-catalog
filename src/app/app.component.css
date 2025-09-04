@@ -1,0 +1,34 @@
+body{
+    background-image: url("C:/Users/ngipol_n/Desktop/fg-lab-6/src/assets/beach.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.btn1{
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    color: white;
+}
+.btn1:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar{
+    background-color: #0e2754ad;
+}
+
+.welcomeText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #2a60bfad;
+    color: white;
+    height: 6rem;
+    padding: 20px;
+}
+
