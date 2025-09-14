@@ -1,9 +1,11 @@
 .bg_main{
   display: block;
-  min-height: 150vh;
+  min-height: 170vh;
   width: 100%;
   background: url('C:/Users/natad/AngularProj/fg-lab-6/src/assets/beach.jpg') no-repeat center center;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 
@@ -17,4 +19,79 @@ table th {
 }
 table td{
     background-color: #bcb0ffce; /* cell background color */
+}
+
+/*Search form*/
+.searchBar {
+  display: flex;             
+  justify-content: center;  
+  padding-top: 5rem;
+  margin: 2rem auto;
+  margin-top: 0;
+  margin-bottom: -2rem;
+  max-width: 60rem;                   
+}
+
+.list-group {
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  table, thead, tbody, th, td, tr {
+    display: block; /* Make table elements block-level */
+  }
+
+  thead tr {
+    display: none; /* Hide table header */
+  }
+
+  tr {
+    margin-bottom: 1rem; /* Add space between rows */
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%; /* Add left padding for labels */
+    border: none; /* Remove borders */
+    border-bottom: 1px solid #eee; /* Add bottom border for separation */
+  }
+
+  td::before {
+    content: attr(data-label); /* Use data-label attribute for labels */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45%; /* Set label width */
+    padding-left: 1rem; /* Add padding to labels */
+    font-weight: bold; /* Make labels bold */
+    white-space: nowrap; /* Prevent label wrapping */
+  }
+
+  /*border radius*/
+  td:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+td:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+
+  .bg_main{
+    min-height: 100vh;
+  }
+
+  .searchBar{
+    max-width: 22rem;
+  }
+
 }

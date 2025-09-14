@@ -1,19 +1,43 @@
-.product-card {
-  max-width: 500px;
-  margin: auto;
-  border-radius: 12px;
-  overflow: hidden;
+.bg_main {
+  background-image: url('C:/Users/natad/AngularProj/fg-lab-6/src/assets/beach.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  min-height: 100vh;         /* fill full viewport height */
 }
 
-.product-card img {
-  object-fit: cover;
-  height: 300px;
+.container {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 20rem;
 }
 
-.card-body {
-  background-color: #f8f9fa;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.list-group-item {
-  background-color: transparent;
+p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+    max-width: 22rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
 }

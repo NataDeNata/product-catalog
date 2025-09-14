@@ -1,30 +1,56 @@
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <div class="bg_main">
-    <div class="container">
-  <h2 style="padding-top: 5rem;" class="mb-4 text-white">Product Catalog</h2>
-  <table class="table table-striped table-hover">
-    <thead class="table-dark">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price (₱)</th>
-         <th>Location</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of products">
-        <td>{{ product.id }}</td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.price | currency:'PHP':'symbol':'1.0-0' }}</td>
-        <td>{{ product.location }}</td>
-        <td>
-          <button class="btn btn-primary btn-sm" (click)="viewDetails(product)">
-            View Details
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <!-- Search form -->
+  <form class="searchBar d-flex position-relative" (submit)="$event.preventDefault()">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      [(ngModel)]="searchTerm"
+      name="search"
+      (input)="updateSuggestions()"
+    />
+    <button class="btn btn-outline-light" type="submit">Search</button>
+
+    <!-- Suggestions dropdown -->
+    <ul *ngIf="suggestions.length > 0" class="list-group position-absolute w-100 mt-5">
+      <li
+        *ngFor="let suggestion of suggestions"
+        class="list-group-item list-group-item-action"
+        (click)="selectSuggestion(suggestion)"
+      >
+        {{ suggestion }}
+      </li>
+    </ul>
+  </form>
+
+  <!-- Product table -->
+  <div class="container">
+    <h2 style="padding-top: 5rem;" class="mb-4 text-white">Product Catalog</h2>
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price (₱)</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts">
+          <td [attr.data-label]="'ID'">{{ product.id }}</td>
+          <td [attr.data-label]="'Product'">{{ product.name }}</td>
+          <td [attr.data-label]="'Price'">{{ product.price | currency:'PHP':'symbol' }}</td>
+          <td [attr.data-label]="'Location'">{{ product.location }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="viewDetails(product)">
+              View Details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
